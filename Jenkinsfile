@@ -23,7 +23,10 @@ pipeline {
 		stage('test') {
 				when {
 				
-					expression { params.PRINT ==~ /(?i)(TRUE)/ }
+					allOf {
+						expression { params.PRINT ==~ /(?i)(TRUE)/ }
+						expression { params.NAME == 'Sai Shanmukh' }
+					      }
 				     }
 
 				steps {
