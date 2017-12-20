@@ -23,7 +23,7 @@ pipeline {
 		stage('test') {
 				when {
 				
-					expression { params.PRINT == 'TRUE' }
+					expression { params.PRINT ==~ 'TRUE' }
 				     }
 
 				steps {
