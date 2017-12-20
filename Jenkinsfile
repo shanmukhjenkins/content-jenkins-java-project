@@ -25,7 +25,7 @@ pipeline {
 				
 					expression {
 							
-							params.PRINT=='true'
+							params.PRINT == 'true'
 						   }
 				     }
 
