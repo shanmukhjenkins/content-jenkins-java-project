@@ -16,6 +16,10 @@ pipeline {
 						
 					echo "My Branch Name: ${env.BRANCH_NAME}"
 				      }
+	
+				}
+
+		stage('test') {
 				when {
 				
 					expression {
