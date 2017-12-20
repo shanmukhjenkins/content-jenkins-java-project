@@ -5,7 +5,7 @@ pipeline {
 	parameters {
 		
 			string ( name:'NAME')
-			boolean ( name:'PRINT')
+			booleanParam ( name:'PRINT')
 
 		   }
 	stages {
