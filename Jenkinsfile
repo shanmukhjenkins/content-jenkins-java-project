@@ -15,6 +15,7 @@ pipeline {
 				steps {
 						
 					echo "My Branch Name: ${env.BRANCH_NAME}"
+					echo "The value of the parameter is ${params.PRINT}"
 				      }
 	
 				}
