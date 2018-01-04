@@ -22,9 +22,9 @@ pipeline {
 	
 				}
 
-	stage('build') {
+	stage('test') {
                                 steps {
-                                                sh 'ant -f build.xml -v'
+                                                sh 'ant -f test.xml -v'
                                       }
                        }        
 		}
