@@ -1,8 +1,13 @@
 pipeline {
+
+	tools{
+		ant 'Ant_1,10,1'
+
+	     }
 	
 	agent {
 
-		docker 'winautotest1/ant-image'
+		docker 'centos'
 	      }
 
 	parameters {
