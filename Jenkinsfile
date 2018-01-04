@@ -1,6 +1,9 @@
 pipeline {
 	
-	agent any
+	agent {
+
+		docker 'ant-image'
+	      }
 
 	parameters {
 		
@@ -13,27 +16,16 @@ pipeline {
 		stage('build') {
 	
 				steps {
-						
-					echo "My Branch Name: ${env.BRANCH_NAME}"
-					echo "The value of the parameter is ${params.PRINT}"
-				      }
-	
-				}
-
-		stage('test') {
-				when {
 				
-					allOf {
-						expression { params.PRINT ==~ /(?i)(TRUE)/ }
-						expression { params.NAME == 'Sai Shanmukh' }
-					      }
-				     }
-
-				steps {
-
-					echo "The value of the parameter is ${params.NAME}"
+						sh 'ant -f build.xml -v'		
 				      }
 	
 				}
+
+	stage('build') {
+                                steps {
+                                                sh 'ant -f build.xml -v'
+                                      }
+                       }        
 		}
 }
