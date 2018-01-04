@@ -2,7 +2,7 @@ pipeline {
 	
 	agent {
 
-		docker 'ant-image'
+		docker 'winautotest1/ant-image'
 	      }
 
 	parameters {
